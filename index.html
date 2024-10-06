@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Science Lab</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <header>
+        <h1>Virtual Science Lab</h1>
+        <nav>
+            <ul>
+                <li><a href="#exploracao">Ocean Exploration</a></li>
+                <li><a href="#troca">Gas Exchange</a></li>
+                <li><a href="#impacto">Impact of Aerosols</a></li>
+                <li><a href="#jogo">Simulation Game</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="exploracao" class="fade-in">
+            <h2>Ocean Exploration</h2>
+            <p>Activity: Phytoplankton Maps</p>
+            <p>Description: Create interactive maps with OCI data to visualize the distribution of phytoplankton.</p>
+            <button onclick="startFitoplanctonMap()">Start Map</button>
+        </section>
+
+        <section id="troca" class="fade-in">
+            <h2>Gas Exchange between Ocean and Atmosphere</h2>
+            <p>Activity: CO2 Flux Simulation</p>
+            <p>Description: Adjust variables and observe the effects on gas exchange.</p>
+            <button onclick="simulateCO2()">Simulate CO2</button>
+        </section>
+
+        <section id="impacto" class="fade-in">
+            <h2>Impact of Aerosols on Phytoplankton</h2>
+            <p>Activity: Nutrient Experiments</p>
+            <p>Description: Simulate the impact of aerosols on phytoplankton growth.</p>
+            <button onclick="runAerosolExperiment()">Start Experiment</button>
+        </section>
+
+        <section id="jogo" class="fade-in">
+            <h2>Simulation Game</h2>
+            <p>Manage a marine ecosystem using data from the PACE mission!</p>
+            <button onclick="startGame()">Start Game</button>
+        </section>
+        <section id="recursosadd" class="fade-in">
+            <h2>Additional Resources</h2>
+            <ul class="lista">
+                <li>Video Tutorials</li>
+                <li>Teacher's Guide</li>
+                <li>Discussion Forum</li>
+                <li>Support</li>
+
+            </ul>
+        </section>
+    </main>
+    <div class="bubble-container">
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+    </div>
+
+
+
+    <footer>
+        <p> 2024 Virtual Science Lab</p>
+    </footer>
+
+    <script src="/script.js"></script>
+</body>
+
+</html>

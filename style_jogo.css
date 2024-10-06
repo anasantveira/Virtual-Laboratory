@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: linear-gradient(to bottom, rgba(0, 119, 190, 0.8), rgba(0, 63, 94, 0.8)), url('/imgs/bubbles.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    margin: 0;
+    height: 100vh;
+    overflow: hidden; /* Para impedir que barras de rolagem apareçam */
+  }
+  
+  header {
+   
+    color: white;
+    padding: 10px 0;
+    width: 100%;
+    text-align: center;
+  }
+  
+  h1 {
+    margin: 0;
+    font-size: 2.5rem;
+  }
+  h2{
+    font-weight: 500;
+  }
+  
+  section {
+    margin: 20px 0;
+  }
+  
+  .role-selection {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+  }
+  .role-selection-btns{
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .role-btn {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color:#73EC8B;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .role-btn:hover, button:hover {
+    background-color: #d2ff72a2;
+  }
+  
+  .environment {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 40vh;
+    width: 100%;
+  }
+  
+  canvas {
+    border: 2px solid #CDFFEB;
+    width: 500px;
+    height: 450px;
+    background-color: rgba(255, 255, 255, 0);
+    border-radius: 10px;
+    box-shadow: rgba(136, 230, 249, 0.855) 0px 5px 15px;
+  }
+  
+  .decision-panel {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 40%;
+  }
+  
+  select, button {
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 10px;
+  }
+  select, option{
+    width: 100%;
+    color: #73EC8B;;
+    font-weight: bold;
+    text-align: center;
+  }
+  button{
+    border: none;
+    background-color:#73EC8B;
+    font-weight: 700;
+    margin-top: 2%;
+    font-size: 1.5rem;
+    width: 50%;
+    align-self: center;
+  }
+  footer {
+    text-align: center;
+  }
+
+  .video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden; /* Garante que o vídeo fique dentro dos limites da tela */
+    z-index: -1; /* Envia o vídeo para trás do conteúdo */
+  }
+  
+  #bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100vw;
+    min-height: 100vh;
+    object-fit: cover; /* Faz com que o vídeo cubra toda a área da tela */
+    /*animation: moveVideo 10s linear infinite; /* Animação do movimento do vídeo */
+  }
+  
+  @keyframes moveVideo {
+    0% {
+      transform: translateY(0); /* Começa no topo */
+    }
+    100% {
+      transform: translateY(100vh); /* Move para baixo da tela */
+    }
+  }
+
+  @media screen and (max-width: 433px) {
+    body{
+        height: 100vh;
+    }
+  }

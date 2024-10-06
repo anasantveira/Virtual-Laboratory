@@ -1,0 +1,154 @@
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #29ca8d;
+}
+
+header {
+    background: #17be8c;
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(26, 145, 135, 0.2);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: hwb(191 1% 83%);
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    background: rgb(73, 247, 174);
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(33, 209, 171, 0.1);
+    transition: transform 0.3s;
+}
+
+section:hover {
+    transform: translateY(-5px);
+}
+
+button {
+    background: #03534d;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #128d7d;
+}
+
+footer {
+    text-align: center;
+    padding: 15px 0;
+    background: #034e3c;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+.bubble-container {
+    position: relative;
+    height: 300px; /* Ajuste conforme necessário */
+    overflow: hidden;
+    margin: 20px 0;
+}
+
+.bubble {
+    position: absolute;
+    bottom: -50px; /* Começa fora da tela */
+    background-color: rgba(128, 238, 205, 0.637);
+    border-radius: 50%;
+    animation: bubbleRise 6s infinite;
+    opacity: 0.7;
+}
+
+.bubble:nth-child(1) {
+    width: 30px;
+    height: 30px;
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.bubble:nth-child(2) {
+    width: 40px;
+    height: 40px;
+    left: 25%;
+    animation-delay: 1s;
+}
+
+.bubble:nth-child(3) {
+    width: 25px;
+    height: 25px;
+    left: 50%;
+    animation-delay: 2s;
+}
+
+.bubble:nth-child(4) {
+    width: 35px;
+    height: 35px;
+    left: 65%;
+    animation-delay: 3s;
+}
+
+.bubble:nth-child(5) {
+    width: 45px;
+    height: 45px;
+    left: 80%;
+    animation-delay: 4s;
+}
+
+@keyframes bubbleRise {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.8;
+        transform: translateY(-150px); /* Altura da subida */
+    }
+    100% {
+        transform: translateY(-200px); /* Saindo da tela */
+        opacity: 0;
+    }
+}
+

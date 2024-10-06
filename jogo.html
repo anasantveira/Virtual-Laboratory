@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Game - Ecosystem Simulation</title>
+    <link rel="stylesheet" href="style_jogo.css" />
+  </head>
+  <body>
+    <div class="video-background">
+        <video autoplay muted loop id="bg-video">
+          <source src="video2.mp4" type="video/mp4">
+          Seu navegador não suporta a tag de vídeo.
+        </video>
+      </div>
+    <header>
+      <h1>Marine Ecosystem Simulation</h1>
+    </header>
+
+    <section class="role-selection">
+      <h2>Your Character</h2>
+      <div class="role-selection-btns">
+        <button id="scientistBtn" class="role-btn">Scientist</button>
+        <button id="polluterBtn" class="role-btn">Polluter</button>
+        <button id="conservationistBtn" class="role-btn">Conservationist</button>
+      </div>      
+    </section>
+
+    <!-- Ambiente Dinâmico -->
+    <section class="environment">
+      <h2>Dynamic Environment</h2>
+      <canvas id="ecosystemCanvas"></canvas>
+    </section>
+
+    <!-- Painel de Decisões -->
+    <section class="decision-panel">
+      <h2>Decisions</h2>
+      <select id="actionSelect">
+        <option value="" selected disabled>Select Item</option>
+        <option value="introduceSpecies">Introduce Species</option>
+        <option value="reducePollution">Reduce Pollution</option>
+        <option value="rehabilitateCoral">Rehabilitate Corals</option>
+      </select>
+      <button id="executeActionBtn">Play</button>
+    </section>
+
+    <footer>
+        <p>Ecosystem Metrics: <span id="ecosystemMetrics"> Polluted</span></p>
+      </footer>
+    
+    <script src="app.js"></script>
+  </body>
+</html>
